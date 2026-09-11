@@ -1,0 +1,2 @@
+import GenericPage from "./GenericPage";
+export default function Eventos(){ return <GenericPage title="Eventos Sísmicos" subtitle="Registro de eventos y actividad sísmica" button="Nuevo Evento" columns={["ID","Fecha","Magnitud","Municipio","Descripción","Acciones"]} rows={[["1","15/08/2026 10:24","6.2","San Jacinto","Movimiento sísmico registrado"],["2","10/08/2026 14:15","5.1","El Carmen de Bolívar","Evento reportado"],["3","02/08/2026 08:45","4.7","Zambrano","Evento reportado"]]}/>; }

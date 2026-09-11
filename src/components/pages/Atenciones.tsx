@@ -1,0 +1,2 @@
+import GenericPage from "./GenericPage";
+export default function Atenciones(){ return <GenericPage title="Atenciones" subtitle="Seguimiento de las atenciones realizadas" button="Nueva Atención" columns={["ID","Persona/Familia","Tipo","Responsable","Fecha","Estado","Acciones"]} rows={[["1","Familia Pérez","Atención social","Miledys","15/08/2026","Atendida"],["2","Familia Gómez","Salud","Daniela","16/08/2026","En proceso"],["3","Familia Martínez","Orientación","Diego","17/08/2026","Atendida"]]}/>; }

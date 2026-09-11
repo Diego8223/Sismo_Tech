@@ -1,0 +1,2 @@
+import GenericPage from "./GenericPage";
+export default function Usuarios(){ return <GenericPage title="Usuarios" subtitle="Administración de usuarios del sistema" button="Nuevo Usuario" columns={["ID","Nombre","Correo","Rol","Estado","Acciones"]} rows={[["1","Administrador","admin@sismotech.com","Administrador","Activo"],["2","Miledys","miledys@sismotech.com","Gestor","Activo"],["3","Daniela","daniela@sismotech.com","Gestor","Activo"],["4","Diego","diego@sismotech.com","Gestor","Activo"]]}/>; }

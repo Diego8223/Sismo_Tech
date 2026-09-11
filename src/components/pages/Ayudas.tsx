@@ -1,0 +1,2 @@
+import GenericPage from "./GenericPage";
+export default function Ayudas(){ return <GenericPage title="Ayudas" subtitle="Control de ayudas entregadas a las familias" button="Nueva Ayuda" columns={["ID","Tipo","Cantidad","Beneficiario","Fecha","Estado","Acciones"]} rows={[["1","Alimentos","20 kits","Familia Pérez","15/08/2026","Entregada"],["2","Kit de aseo","10 kits","Familia Gómez","16/08/2026","Entregada"],["3","Albergue","4 carpas","Familia Martínez","17/08/2026","Entregada"]]}/>; }

@@ -1,0 +1,2 @@
+import GenericPage from "./GenericPage";
+export default function Familias(){ return <GenericPage title="Familias" subtitle="Registro y organización de familias afectadas" button="Nueva Familia" columns={["ID","Familia","Jefe de hogar","Personas","Municipio","Acciones"]} rows={[["1","Familia Pérez","María José Pérez","4","San Jacinto"],["2","Familia Gómez","Juan Carlos Gómez","3","El Carmen de Bolívar"],["3","Familia Martínez","Ana Sofía Martínez","5","Zambrano"],["4","Familia Díaz","Luis Fernando Díaz","2","San Jacinto"]]}/>; }
