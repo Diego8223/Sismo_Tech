@@ -1,7 +1,9 @@
-const API_URL =
-  import.meta.env.VITE_API_URL ?? "http://localhost:3000/api";
+const API_URL = (
+  (import.meta as any).env?.VITE_API_URL ??
+  "http://localhost:3000/api"
+).replace(/\/$/, "");
 
-export async function apiRequest<T>(
+export async function apiRequest<T = any>(
   endpoint: string,
   options: RequestInit = {}
 ): Promise<T> {
@@ -14,27 +16,25 @@ export async function apiRequest<T>(
   });
 
   if (!response.ok) {
-    let message = `Error ${response.status}: no fue posible completar la solicitud.`;
+    let message = `Error ${response.status}`;
 
     try {
       const errorData = await response.json();
-
-      if (errorData?.message) {
-        message = errorData.message;
-      }
+      message = errorData?.detail ?? errorData?.message ?? message;
     } catch {
-      // La respuesta no era JSON
+      // Mantener mensaje por defecto
     }
 
     throw new Error(message);
   }
 
-  // Algunas respuestas pueden ser 204 No Content
   if (response.status === 204) {
     return undefined as T;
   }
 
   return response.json();
 }
+
+export const apiFetch = apiRequest;
 
 export { API_URL };
