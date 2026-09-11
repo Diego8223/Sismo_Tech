@@ -7,6 +7,15 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+
+  preview: {
+    host: "0.0.0.0",
+    port: 4173,
+    allowedHosts: [
+      "sismo-tech-frontend.onrender.com",
+    ],
+  },
+
   server: {
     host: "0.0.0.0",
     port: 5173,
